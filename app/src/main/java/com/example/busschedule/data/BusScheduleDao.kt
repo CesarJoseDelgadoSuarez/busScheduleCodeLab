@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 interface BusScheduleDao {
     @Query(
         """
-        SELECT * FROM busSchedule 
+        SELECT * FROM Schedule 
         ORDER BY arrival_time ASC    
         """
     )
@@ -16,7 +16,7 @@ interface BusScheduleDao {
 
     @Query(
         """
-        SELECT * FROM busSchedule 
+        SELECT * FROM Schedule 
         WHERE stop_name = :stopName 
         ORDER BY arrival_time ASC 
         """
